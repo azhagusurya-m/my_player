@@ -4,20 +4,20 @@
 void count_bracket(char str[])
 {
 	
-	int i=0,j=strlen(str)-1,count=0;
+	int i=0,j=strlen(str)-1,count_1=0,count_2=0;
       
 	while(i<=j)
 	{
-	if(str[i]>='(')
-	count++;
-	if(str[j]==')')
-	count--;
-	
-	i++;
-	j--;
-     	}
+	if(str[i]=='(')
+	count_1++;
+	if(str[i]==')')
+	count_2++;
+
+	i++;  	}
+     	printf("%d",(count_1<=count_2)?count_1:count_2);
      	
-     	printf("%d",strlen(str)-count);
+     	
+     
 	
 }
 	int main(void) {
